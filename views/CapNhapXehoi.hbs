@@ -1,0 +1,19 @@
+<h3>{{titleView}}</h3>
+
+<form action="/CapNhapXehoi/{{xehoiModels._id}}?_method=PUT" method="POST" style="margin-top: 40px;">
+    <div class="row">
+        <div class="form-group col-sm-2">
+            <label for="email">Tên:</label>
+            <input type="text" class="form-control" id="email" placeholder="Tên" name="Ten"
+                value="{{xehoiModels.Ten}}">
+        </div>
+        <div class="form-group col-sm-4">
+            <label for="text">Năm:</label>
+            <input type="Number" class="form-control" placeholder="Năm" name="Nam" value="{{xehoiModels.Nam}}">
+        </div>
+        <div class="form-group col-sm-2">
+            <label for="Number">Giá Bán</label>
+                        <input type="" class="form-control" placeholder="Giaban" name="GiaBan" value="{{xehoiModels.GiaBan}}">
+        </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

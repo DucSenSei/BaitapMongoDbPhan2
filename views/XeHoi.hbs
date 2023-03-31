@@ -1,0 +1,30 @@
+
+<div class="container">
+    <!-- Table to display user list -->
+    <div class=" text-right float-right">
+        <a href="/add_xe" class="btn btn-primary">Add Product</a>
+    </div>
+    <table class="table" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Tên SP</th>
+                <th>Năm</th>
+                <th>Giá</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="">
+            {{#each xehoiModel}}
+            <tr>
+                <td>{{this.Ten}}</td>
+                <td>{{this.Nam}}</td>
+                <td>{{this.GiaBan}}</td>
+                <td>
+                    <a href="/NhayManCapNhap/{{this._id}}" class="btn btn-primary">Edit</a>
+                    <a href="/deleteXeHoi/{{this._id}}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
