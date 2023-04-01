@@ -31,11 +31,11 @@ app.set('views','./views');
 
 
 app.get('/', async (req, res) => {
-   // await mongoose.connect(uri).then(console.log("Ok men"));
-   // let xehois = await xehoiModel.find();
-   // console.log(xehois);
-   // res.send(xehois);
-   res.render('managerProduct');
+   xehoiModel.find({}).then(xehoiModel =>{
+     res.render("XeHoi",{
+        xehoiModel: xehoiModel.map(xehoiModels => xehoiModels.toJSON())
+     })
+   })
 });
 app.get("/getAllxehoi",(req , res) =>{
    xehoiModel.find({}).then(xehoiModel =>{
